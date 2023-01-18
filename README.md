@@ -18,7 +18,13 @@ I wrote this CSS for my own use so it is not tested except for my current Mull o
 
 ## Screenshots
 
-TODO
+Mobile screenshots
+
+<img src="/screenshots/Screenshot_20230118-140542.png" height="600" alt="Mobile Unread screenshot" /> <img src="/screenshots/Screenshot_20230118-140721.png" height="600" alt="Mobile Feeds screenshot" /> <img src="/screenshots/Screenshot_20230118-140759.png" height="600" alt="Mobile Feed screenshot" /> <img src="/screenshots/Screenshot_20230118-140648.png" height="600" alt="Mobile Item screenshot" />
+
+Desktop screenshots
+
+<img src="/screenshots/Screenshot 2023-01-18 at 14-11-32 Unread (124) - Miniflux.png" width="640" alt="Desktop Unread screenshot" /> <img src="/screenshots/Screenshot 2023-01-18 at 14-12-42 Feeds (21) - Miniflux.png" width="640" alt="Desktop Feeds screenshot" /> <img src="/screenshots/Screenshot 2023-01-18 at 14-12-05 Wumo Kind of Normal (29) - Miniflux.png" width="640" alt="Desktop Feed screenshot" /> <img src="/screenshots/Screenshot 2023-01-18 at 14-15-37 Wumo 18. Jan 2023 - Miniflux.png" width="640" alt="Desktop Item screenshot" />
 
 ## Installation:
 1. Download and install [Miniflux v2](https://github.com/miniflux/v2)
