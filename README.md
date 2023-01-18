@@ -1,6 +1,7 @@
 # miniflux-minimal-css
 
-## Introduction
+Introduction
+------------
 I wrote a black Miniflux custom CSS for a more minimal interface.
 
 It basically:
@@ -16,7 +17,8 @@ This CSS was written for [Miniflux v2](https://github.com/miniflux/v2) version 2
 
 I wrote this CSS for my own use so it is not tested except for my current Mull on Android and Firefox on Windows. Chromium on Windows seems to work as well but I only gave it a sneak peek.
 
-## Screenshots
+Screenshots
+-----------
 
 Mobile screenshots
 
@@ -26,9 +28,16 @@ Desktop screenshots
 
 <img src="/screenshots/Screenshot 2023-01-18 at 14-11-32 Unread (124) - Miniflux.png" width="640" alt="Desktop Unread screenshot" /> <img src="/screenshots/Screenshot 2023-01-18 at 14-12-42 Feeds (21) - Miniflux.png" width="640" alt="Desktop Feeds screenshot" /> <img src="/screenshots/Screenshot 2023-01-18 at 14-12-05 Wumo Kind of Normal (29) - Miniflux.png" width="640" alt="Desktop Feed screenshot" /> <img src="/screenshots/Screenshot 2023-01-18 at 14-15-37 Wumo 18. Jan 2023 - Miniflux.png" width="640" alt="Desktop Item screenshot" />
 
-## Installation:
+Installation
+------------
 1. Download and install [Miniflux v2](https://github.com/miniflux/v2)
 2. Go to `Settings`
 3. Choose Theme `Dark - Sans Serif`
 4. Manually copy all CSS from [miniflux.css](/miniflux.css) to `Custom CSS`
 5. Click `Update` & enjoy!
+
+Credits
+-------
+- Author: Gerben Versluis
+- MiniFlux Authors: Frédéric Guillot - [List of contributors](https://github.com/miniflux/v2/graphs/contributors)
+- Distributed under Apache 2.0 License
