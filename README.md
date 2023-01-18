@@ -1,4 +1,4 @@
-# miniflux-minimal
+# miniflux-minimal-css
 
 ## Introduction
 I wrote a black Miniflux custom CSS for a more minimal interface.
