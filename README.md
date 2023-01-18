@@ -30,6 +30,5 @@ Desktop screenshots
 1. Download and install [Miniflux v2](https://github.com/miniflux/v2)
 2. Go to `Settings`
 3. Choose Theme `Dark - Sans Serif`
-4. Scroll down to `Custom CSS`
-5. Manually copy all CSS from [miniflux.css](/miniflux.css) to the textarea
-6. Click `Update` & enjoy!
+4. Manually copy all CSS from [miniflux.css](/miniflux.css) to `Custom CSS`
+5. Click `Update` & enjoy!
