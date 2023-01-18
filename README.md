@@ -14,7 +14,7 @@ It basically:
 
 This CSS was written for [Miniflux v2](https://github.com/miniflux/v2) version 2.0.41 and may work on different versions.
 
-I wrote this CSS for my own use so it is not tested except for my current Mull on Android and Firefox on Windows.
+I wrote this CSS for my own use so it is not tested except for my current Mull on Android and Firefox on Windows. Chromium on Windows seems to work as well but I only gave it a sneak peek.
 
 ## Screenshots
 
