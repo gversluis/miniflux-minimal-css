@@ -8,7 +8,7 @@ It basically:
 - Removes text where there are icons available because I wanted a more compact design
 - Added some colors for the icons to make them visually distinctable
 - Moved common item actions to the right where they are close to my fingers on mobile
-- Hides less common actions which are available one click away (access keys may still work)
+- Hides less common actions which are available one click away (keyboard navigation may still work)
 - Black background so it produces less light and uses less battery
 
 
