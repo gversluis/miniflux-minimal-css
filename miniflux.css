@@ -1,0 +1,314 @@
+/**
+ * Copyright 2023 Gerben Versluis. All rights reserved.
+ * Use of this source code is governed by the Apache 2.0
+ * license that can be found in the LICENSE file.
+ */
+
+/**
+ * I wrote this CSS for my own use.
+ */
+ 
+/* always show menu so it is easy to switch */
+.header {
+	padding-bottom: 42px; /* make space for fixed toolbar */
+	margin-bottom: 4px;
+}
+nav {
+	position: fixed;
+	width: 100%;
+	max-width: 750px;
+	top: 0;
+	background: #532b00;
+	margin-bottom: 0;
+	z-index: 1;
+	padding-top: 4px;
+	min-height: 42px;
+}
+
+/* icon to replace unread button */
+.search-toggle-switch a,
+.header li {
+	display: inline-block;
+	width: 24px;
+	font-size: 0;
+	margin-right: 16px;
+}
+.header li.active>a::before {
+	filter: sepia(100%);
+}
+.header li>a[href$="/unread"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICA8cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz4KICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0xMCAxMGw0IDRtMCAtNGwtNCA0IiAvPgo8L3N2Zz4=");
+}
+.header li>a[href$="/starred"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggc3Ryb2tlPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+CjxwYXRoIGZpbGw9IiNkZGQiIGQ9Ik0xMiAxNy43NWwtNi4xNzIgMy4yNDUgMS4xNzktNi44NzMtNC45OTMtNC44NjcgNi45LTEuMDAyTDEyIDJsMy4wODYgNi4yNTMgNi45IDEuMDAyLTQuOTkzIDQuODY3IDEuMTc5IDYuODczeiIgLz4KPC9zdmc+");
+}
+.header li>a[href$="/history"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5IiAvPjxwYXRoIGQ9Ik05IDEybDIgMmw0IC00IiAvPjwvc3ZnPg==");
+}
+.header li>a[href$="/feeds"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggc3Ryb2tlPSJub25lIiBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIj48L3BhdGg+CjxjaXJjbGUgY3g9IjUiIGN5PSIxOSIgcj0iMSI+PC9jaXJjbGU+CjxwYXRoIGQ9Ik00IDRhMTYgMTYgMCAwIDEgMTYgMTYiPjwvcGF0aD4KPHBhdGggZD0iTTQgMTFhOSA5IDAgMCAxIDkgOSI+PC9wYXRoPgo8L3N2Zz4=");
+}
+.header li>a[href$="/categories"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICA8cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNNSA0aDRsMyAzaDdhMiAyIDAgMCAxIDIgMnY4YTIgMiAwIDAgMSAtMiAyaC0xNGEyIDIgMCAwIDEgLTIgLTJ2LTExYTIgMiAwIDAgMSAyIC0yIj48L3BhdGg+CiAgICAgICAgPGxpbmUgeDE9IjEyIiB5MT0iMTAiIHgyPSIxMiIgeTI9IjE2Ij48L2xpbmU+CiAgICAgICAgPGxpbmUgeDE9IjkiIHkxPSIxMyIgeDI9IjE1IiB5Mj0iMTMiPjwvbGluZT4KPC9zdmc+");
+}
+.header li>a[href$="/settings"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICA8cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTAuMzI1IDQuMzE3Yy40MjYgLTEuNzU2IDIuOTI0IC0xLjc1NiAzLjM1IDBhMS43MjQgMS43MjQgMCAwIDAgMi41NzMgMS4wNjZjMS41NDMgLS45NCAzLjMxIC44MjYgMi4zNyAyLjM3YTEuNzI0IDEuNzI0IDAgMCAwIDEuMDY1IDIuNTcyYzEuNzU2IC40MjYgMS43NTYgMi45MjQgMCAzLjM1YTEuNzI0IDEuNzI0IDAgMCAwIC0xLjA2NiAyLjU3M2MuOTQgMS41NDMgLS44MjYgMy4zMSAtMi4zNyAyLjM3YTEuNzI0IDEuNzI0IDAgMCAwIC0yLjU3MiAxLjA2NWMtLjQyNiAxLjc1NiAtMi45MjQgMS43NTYgLTMuMzUgMGExLjcyNCAxLjcyNCAwIDAgMCAtMi41NzMgLTEuMDY2Yy0xLjU0MyAuOTQgLTMuMzEgLS44MjYgLTIuMzcgLTIuMzdhMS43MjQgMS43MjQgMCAwIDAgLTEuMDY1IC0yLjU3MmMtMS43NTYgLS40MjYgLTEuNzU2IC0yLjkyNCAwIC0zLjM1YTEuNzI0IDEuNzI0IDAgMCAwIDEuMDY2IC0yLjU3M2MtLjk0IC0xLjU0MyAuODI2IC0zLjMxIDIuMzcgLTIuMzdjMSAuNjA4IDIuMjk2IC4wNyAyLjU3MiAtMS4wNjV6Ij48L3BhdGg+CiAgICAgICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMyI+PC9jaXJjbGU+Cjwvc3ZnPg==");
+}
+.header li>a[href$="/logout"]::before {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iNDAgNDAgNDMyIDQzMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiNkZGQiIGZpbGw9IiNkZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CjxwYXRoIGQ9Ik0yNTYgNzMuODI1YTE4Mi4xOCAxODIuMTggMCAwIDAtMTgyLjE4IDE4Mi4xOGMwIDEwMC42MTcgODEuNTY3IDE4Mi4xNyAxODIuMTggMTgyLjE3YTE4Mi4xNzUgMTgyLjE3NSAwIDEgMCAwLTM2NC4zNXptLTE4LjA5NiA4Ni4yMmExOC4wOTkgMTguMDk5IDAgMCAxIDM2LjE5NyAwdjUzLjk3NWExOC4wOTkgMTguMDk5IDAgMCAxLTM2LjE5NyAwek0yNTYgMzQ4LjU4OWE5Mi40MTMgOTIuNDEzIDAgMCAxLTMyLjk2My0xNzguNzUxdjMzLjM4YTYyLjQ1MyA2Mi40NTMgMCAxIDAgNjUuOTMgMHYtMzMuMzhBOTIuNDE1IDkyLjQxNSAwIDAgMSAyNTYgMzQ4LjU4OHoiLz4KPC9zdmc+");
+}
+.logo {
+	padding-top: 2px;
+}
+.logo a::after {
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI3IiB3aWR0aD0iMjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZT0iI2RkZCIgZmlsbD0iI2RkZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggZD0iTTEyIDI0YTEyIDEyIDAgMSAxIDEyLTEyIDEyLjAxMyAxMi4wMTMgMCAwIDEtMTIgMTJ6bTAtMjJhMTAgMTAgMCAxIDAgMTAgMTBBMTAuMDExIDEwLjAxMSAwIDAgMCAxMiAyeiIvPjxwYXRoIGQ9Ik0xMSAxNWE1IDUgMCAxIDEgNS01IDUuMDA2IDUuMDA2IDAgMCAxLTUgNXptMC04YTMgMyAwIDEgMCAzIDMgMyAzIDAgMCAwLTMtM3oiLz48cGF0aCBkPSJtMTIuMjkzIDEzLjcwNyAxLjQxNS0xLjQxNCA0IDQtMS40MTQgMS40MTV6Ii8+Cjwvc3ZnPg==");
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 6px;
+}
+.header li>a::before {
+	position: absolute;
+	z-index: 0;
+	top: -24px;
+	left: -12px;
+	margin: 0;
+}
+.header li>a {
+	position: absolute;
+	margin-top: 24px;
+	margin-left: 12px;
+	padding: 2px;
+}
+.header li>a:hover {
+	z-index: 1;
+	font-size: 16px;
+	line-height: 100%;
+	background: #000;
+}
+
+
+/* hide add subscription since it is not a common task and can be added when clicking feeds first */
+.header li>a[href$="/subscribe"] {
+	display: none;
+}
+
+/* less margin for search so it takes up less space at the top bar */
+#search-input {
+	margin: 0;
+}
+
+/* marked stars are yellow :) since they are favorites they are allowed to stand out so they are easy to recognize */
+.item-meta a[data-value="star"],
+.item-meta a[data-value="star"]:focus {
+  color: yellow;
+}
+
+/* marked stars are yellow :) since they are favorites they are allowed to stand out so they are easy to recognize */
+.item-meta a[data-value="star"],
+.item-meta a[data-value="star"]:focus {
+  color: yellow;
+}
+
+/* menu always visible on mobile */
+.header nav ul {
+  display: inline-block;
+}
+
+/* put logo next to menu */
+.logo {
+  float: left;
+}
+
+/* header is visible but already clicked so not that important */
+/* leave space next to it for buttons that affect this page */
+.page-header h1 {
+	font-size: 16px;
+	display: inline-block;
+}
+
+/* put items next to each other so they take up less space */
+.header nav ul li,
+.page-header ul,
+.page-header ul li {
+  display: inline-block;
+  line-height: 100%;
+  vertical-align: top;
+}
+
+/* hide text so it takes less space on my small screen */
+.page-header ul li {
+  display: inline-block;
+  width: 32px;
+  margin: 0 0 0 8px;
+  font-size: 0;
+}
+
+/* hovers for icons */
+.page-header ul li>a {
+  position: absolute;
+  margin-top: 24px;
+  padding-top: 6px;
+}
+.page-header ul li a svg {
+  margin-top: calc(-24px - 6px);
+}
+.page-header ul li>a:hover {
+  z-index: 1;
+  background: #000;
+  font-size: 16px;
+  padding: 6px 12px 6px 0;
+}
+
+/* but keep confirm visible, complex because those jump up at different places in tags */
+.confirm {
+  position: absolute;
+  z-index: 200;
+  display: inline-block;
+  block-size: fit-content;
+  margin-top: 32px;
+  line-height: 100%;
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #600;
+  background: #300;
+  color: #c00;
+}
+
+/* black background, less energy and more contrast */
+body {
+  --body-background: #000;
+}
+
+/* more contrast when viewing lists */
+.item {
+  --link-color: #fff;
+}
+
+/* labels are indicating enough and less labels means more space for content */
+.icon-label { 
+  display:none;
+}
+
+/* bigger icons so the visual indicator is bigger */
+.icon {
+  width:32px;
+  height:32px;
+}
+
+/* border is only to seperate items so we don't need a border all around so there is less to process for the eye */
+/* relative positioning so everything within the item can be positioned more easily */
+.items .item {
+  position: relative;
+  border-width: 0px 0px 1px 0px;
+  border-color: #333;
+  padding-left: calc(32px + 2mm);
+  padding-bottom: 2mm;
+  margin-bottom: 4mm;
+}
+
+/* bigger icon */
+.items .item-title img  {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 32px;
+  height: 32px;
+}
+
+/* leave space on the left for the icon */
+.pagination-top + .items .item-title a {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  display: block;
+  left: calc(32px + 4px + 2mm);
+  width: calc(100% - 40px - 4mm - 32px);
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* leave some space for the title */
+.pagination-top + .items .category {
+	margin: 40px 0 0 0;
+	padding: 0;
+	border: 0px;
+	background: transparent;
+	font-size: 11px;
+}
+.pagination-top + .items .category:after {
+	content: "|";
+	color: var(--item-meta-li-color);
+	padding-left: 4px;
+}
+.pagination-top + .items .item-meta-info {
+	margin: 40px 0 0 0;
+	font-size: 11px;
+}
+.pagination-top + .items .item-header,
+.pagination-top + .items .item-title,
+.pagination-top + .items .category,
+.pagination-top + .items .item-meta {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* move the favorites star to the top right of the item */
+.pagination-top + .items .item-meta a[data-value="star"],
+.pagination-top + .items .item-meta a[data-value="unstar"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pagination-top + .items .item-meta a[data-value="read"],
+.pagination-top + .items .item-meta a[data-value="unread"] {
+  position: absolute;
+  right: 0;
+  top: calc(32px + 4px);
+}
+
+.pagination-top + .items .item-meta a[data-original-link] {
+  display: none;
+}
+
+.pagination-top + .items .item-meta a[data-comments-link] {
+  position: absolute;
+  right: calc(32px + 4px);
+  top: calc(32px + 4px);
+}
+
+/* feeds overview page */
+/* hide item meta icons if it is empty */
+:not(.pagination-top) + .items .item-meta ul {
+	display: inline;
+	margin: 0;
+}
+
+:not(.pagination-top) + .items a[href$="/refresh"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* not important, we can do this after clicking on the feed */
+:not(.pagination-top) + .items a[href$="/edit"],
+:not(.pagination-top) + .items a[data-url$="/remove"],
+:not(.pagination-top) + .items a[data-url$="/mark-all-as-read"] {
+	display: none;
+}
+
+/* wider screens adjustments */
+@media (min-width: 600px) {
+	/* logo does not have search */
+	.logo a::after {
+		content: "";
+		padding: 0;
+	}
+	.search {
+		display: inline-block;
+		float: right;
+		margin-top: 3px;
+		margin-right: 18px;
+	}
+}
