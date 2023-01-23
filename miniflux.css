@@ -6,23 +6,54 @@
 
 /**
  * I wrote this CSS for my own use.
+ * This CSS was written for Miniflux v2 version 2.0.41
  */
+ 
+/* do not bounce sticky/fixed menu when reaching end of page */
+html {
+ 	overscroll-behavior: none;
+}
  
 /* always show menu so it is easy to switch */
 .header {
-	padding-bottom: 42px; /* make space for fixed toolbar */
-	margin-bottom: 4px;
-}
-nav {
-	position: fixed;
+	position: sticky;
+	z-index: 100;
+	top: 0;
 	width: 100%;
 	max-width: 750px;
-	top: 0;
-	background: #532b00;
-	margin-bottom: 0;
-	z-index: 1;
+	margin-top: 0;
+	margin-bottom: 10px;
 	padding-top: 4px;
 	min-height: 42px;
+	background: #532b00;
+}
+
+/* the entry content might affects the actions so always show actions */
+/* sticky would be nicer but actions are embedded in entry-header which contains title/date and do not need to be sticky */
+.entry-header .entry-actions {
+	position: fixed;
+	top: 40px;
+	width: 100%;
+	max-width: 750px;
+	margin: 0 -5px;
+	padding: 10px;
+	background: #000;
+}
+.entry header h1 {
+	margin-top: 50px;
+}
+/* place icons below menu above next to miniflux logo */
+.entry-header .entry-actions ul::before {
+	content: "MiniFlux"; /* so it has the same dimensions as the logo */
+	clear: none;
+	color: transparent;
+	margin: 0 6px 0 -10px;
+	font-size: 15px;
+}
+
+/* use same margins as top menu */
+.entry-actions li {
+	margin-right: 8px;
 }
 
 /* icon to replace unread button */
@@ -40,7 +71,7 @@ nav {
 	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgICAgICA8cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz4KICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0xMCAxMGw0IDRtMCAtNGwtNCA0IiAvPgo8L3N2Zz4=");
 }
 .header li>a[href$="/starred"]::before {
-	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggc3Ryb2tlPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+CjxwYXRoIGZpbGw9IiNkZGQiIGQ9Ik0xMiAxNy43NWwtNi4xNzIgMy4yNDUgMS4xNzktNi44NzMtNC45OTMtNC44NjcgNi45LTEuMDAyTDEyIDJsMy4wODYgNi4yNTMgNi45IDEuMDAyLTQuOTkzIDQuODY3IDEuMTc5IDYuODczeiIgLz4KPC9zdmc+");
+	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggc3Ryb2tlPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+CjxwYXRoIGQ9Ik0xMiAxNy43NWwtNi4xNzIgMy4yNDUgMS4xNzktNi44NzMtNC45OTMtNC44NjcgNi45LTEuMDAyTDEyIDJsMy4wODYgNi4yNTMgNi45IDEuMDAyLTQuOTkzIDQuODY3IDEuMTc5IDYuODczeiIgLz4KPC9zdmc+");
 }
 .header li>a[href$="/history"]::before {
 	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2RkZCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5IiAvPjxwYXRoIGQ9Ik05IDEybDIgMmw0IC00IiAvPjwvc3ZnPg==");
@@ -60,6 +91,7 @@ nav {
 .logo {
 	padding-top: 2px;
 }
+.search-toggle-switch a:after,
 .logo a::after {
 	content: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI3IiB3aWR0aD0iMjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZT0iI2RkZCIgZmlsbD0iI2RkZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHBhdGggZD0iTTEyIDI0YTEyIDEyIDAgMSAxIDEyLTEyIDEyLjAxMyAxMi4wMTMgMCAwIDEtMTIgMTJ6bTAtMjJhMTAgMTAgMCAxIDAgMTAgMTBBMTAuMDExIDEwLjAxMSAwIDAgMCAxMiAyeiIvPjxwYXRoIGQ9Ik0xMSAxNWE1IDUgMCAxIDEgNS01IDUuMDA2IDUuMDA2IDAgMCAxLTUgNXptMC04YTMgMyAwIDEgMCAzIDMgMyAzIDAgMCAwLTMtM3oiLz48cGF0aCBkPSJtMTIuMjkzIDEzLjcwNyAxLjQxNS0xLjQxNCA0IDQtMS40MTQgMS40MTV6Ii8+Cjwvc3ZnPg==");
 	vertical-align: middle;
@@ -298,7 +330,7 @@ body {
 	display: none;
 }
 
-/* wider screens adjustments */
+/* wider window adjustments */
 @media (min-width: 600px) {
 	/* logo does not have search */
 	.logo a::after {
@@ -311,4 +343,10 @@ body {
 		margin-top: 3px;
 		margin-right: 18px;
 	}
+	
+	/* logo dimensions are different based on window size */
+	.entry-header .entry-actions ul::before {
+		margin: 0 -5px 0 14px;
+	}
+
 }
