@@ -19,6 +19,7 @@ I wrote this CSS for my own use so it is not tested except for my current Mull o
 
 Screenshots
 -----------
+Those screenshots are outdated but give a gist.
 
 Mobile screenshots
 
