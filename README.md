@@ -1,4 +1,4 @@
-# miniflux-minimal-css (dark theme)
+# miniflux-minimal-css - a custom CSS dark miniflux theme
 
 Introduction
 ------------
