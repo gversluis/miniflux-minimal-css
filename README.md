@@ -37,8 +37,21 @@ Installation
 4. Manually copy all CSS from [miniflux.css](/miniflux.css) to `Custom CSS`
 5. Click `Update` & enjoy!
 
+Other solutions and honorable mentions
+--------------------------------------
+- [Yonta](https://github.com/miradozk/yonta) [Yonta-Fork](https://github.com/JanJastrow/yonta-fork)- Minimal theme
+- [Dark midnight theme for Miniflux](https://codeberg.org/zoenglinghou/miniflux-theme) - Very nice theme: Colored categories (first 8 at the moment), proper white space
+- [MiniFlux-theme](https://github.com/lacereation/minflux-theme) - Minimal theme with menu items and actions hidden in hamburgers
+- [Maya land user styles](https://maya.land/user-styles/miniflux/) - Miniflux custom CSS, changes colors and spacing
+- [miniflux-theme-pure](https://github.com/fengkx/miniflux-theme-pure) - Miniflux custom CSS, changes colors and a bit layout
+- [Custom CSS](https://gist.github.com/TaylanTatli/c1c725691a69eeb9c5f5889371317ed5) - Miniflux custom CSS, changes colors and spacing
+- [reminiflux](https://github.com/reminiflux/reminiflux) - Web client, all feeds visible, looks more like a traditional application
+- [ConstaFlux](https://github.com/ConstantinCezarBegu/Microflux) - Android client with offline reading mode, notifications for new feeds
+- [Miniflutt](https://github.com/DocMarty84/miniflutt) - Android client, great interface, no offline reading
+- [spaRSS](https://github.com/Etuldan/spaRSS) - Best standalone Android RSS reader with offline reading, great user interface, minimal config, but saves articles in cache which is hard to backup without root
+
 Credits
 -------
 - Author: Gerben Versluis
-- MiniFlux Authors: Frédéric Guillot - [List of contributors](https://github.com/miniflux/v2/graphs/contributors)
+- [Miniflux](https://github.com/miniflux/) Authors: Frédéric Guillot - [List of contributors](https://github.com/miniflux/v2/graphs/contributors)
 - Distributed under Apache 2.0 License
