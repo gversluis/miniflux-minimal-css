@@ -318,42 +318,42 @@ form[action$="/update"] input[type="text"] {
 	margin: 0;
 }
 
-:not(.pagination-top) + .items button[href$="/edit"] {
+.items .feed-item .item-meta-icons li > a[href$="/edit"] {
 	position: absolute;
 	top: 0;
 	right: calc(var(--icon-size) + 4px);
 }
-:not(.pagination-top) + .items button[href$="/refresh"] {
+.items .feed-item .item-meta-icons li > a[href$="/refresh"] {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
 /* not important, we can do this after clicking on the feed */
-:not(.pagination-top) + .items button[data-url$="/remove"],
-:not(.pagination-top) + .items button[data-url$="/mark-all-as-read"] {
+.items .feed-item .item-meta-icons li > button[data-url$="/remove"],
+.items .feed-item .item-meta-icons li > button[data-url$="/mark-all-as-read"] {
 	display: none;
 }
 
 /* add spacing to unread feeds layout so it emphasizes the feed */
-:not(.pagination-top) + .items .item {
+.items .feed-item {
 	border-style: solid;
 	border-color: var(--feed-read-background-color);
 	background: var(--feed-read-background-color);
 }
-:not(.pagination-top) + .items .item.feed-has-unread {
+.items .feed-item.feed-has-unread {
 	border-color: var(--feed-has-unread-background-color);
 	background: var(--feed-has-unread-background-color);
 }
-:not(.pagination-top) + .items .item.feed-parsing-error {
+.items .feed-item.feed-parsing-error {
 	border-color: var(--feed-parsing-error-background-color);
 	background: var(--feed-parsing-error-background-color);
 }
-:not(.pagination-top) + .items .item {
+.items .feed-item {
 	border-width: 10px 0;	/* fake padding */
 }
 
-:not(.pagination-top) + .items .item .feed-entries-counter {
+.items .feed-item .feed-entries-counter {
 	position: absolute;
 	top: 2px;
 	right: calc(var(--icon-size) + 4px + var(--icon-size) + 13px);
@@ -362,8 +362,7 @@ form[action$="/update"] input[type="text"] {
 	font-size: 0;
 }
 
-:not(.pagination-top) + .items .item .feed-entries-counter span {
-	background: #333;
+.items .feed-item .feed-entries-counter span {
 	color: #999;
 	padding: 2px 6px;
 	margin: 2px;
@@ -371,10 +370,16 @@ form[action$="/update"] input[type="text"] {
 	border-radius: 4px;
 }
 
-:not(.pagination-top) + .items .item.feed-has-unread .feed-entries-counter span[title*="unread"] {
+.items .feed-item.feed-has-unread .feed-entries-counter span:nth-child(3) {
 	background: #297cc6;
 	color: #fff;
 }
+
+.items .feed-item.feed-has-unread .feed-entries-counter span:nth-child(6) {
+	background: #333;
+	color: #fff;
+}
+
 
 /* empty columns dont need extra padding so there is more space for content */
 td:empty {
